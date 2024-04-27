@@ -1,12 +1,14 @@
 public class User {
     private String userName;
     private String password;
-    private int phoneNumber;
+    private String phoneNumber;
     private String sellerOrRegular;
 
-    public User (String username, String password){
+    public User (String username, String password, String phoneNumber, String sellerOrRegular){
         this.userName = username;
         this.password = password;
+        this.phoneNumber = phoneNumber;
+        this.sellerOrRegular = sellerOrRegular;
     }
 
     public boolean checkCreds (String userName, String password){
@@ -25,13 +27,15 @@ public class User {
         return this.password;
     }
 
-    public String setUsername(){
-        this.userName = userName;
-        return userName;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public String setPassword(){
-        this.password = password;
-        return password;
+    public String getSellerOrRegular() {
+        return sellerOrRegular;
+    }
+
+    public String toString(){
+        return this.getUserName() + " " + this.getPhoneNumber() + " " + this.getSellerOrRegular();
     }
 }
